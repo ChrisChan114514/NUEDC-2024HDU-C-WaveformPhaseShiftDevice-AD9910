@@ -1,0 +1,172 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.34.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Chan Chris, HP Inc., LIC=QF82M-XU61Q-017P1-C9ZZB-GZ9PC-1WWJS
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.34.0.0
+Toolchain Path:  D:\KeilSTM32\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 7 (build 960)
+Assembler:       Armasm.exe V5.06 update 7 (build 960)
+Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
+Library Manager: ArmAr.exe V5.06 update 7 (build 960)
+Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+CPU DLL:         SARMCM3.DLL V5.34.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.38.0
+Dialog DLL:      TCM.DLL V1.48.0.0
+ 
+<h2>Project:</h2>
+D:\Game\STM32CubeMXProject\202410\202410 03\AD9833 资料\资料\DDS开发板-点频9833(ok) V2.0\USER\VirtualCOMPort.uvprojx
+Project File Date:  12/13/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\KeilSTM32\ARM\ARMCC\Bin'
+Build target 'VirtualCOMPort'
+assembling startup_stm32f10x_md.s...
+compiling misc.c...
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_adc.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_can.c...
+compiling core_cm3.c...
+compiling stm32f10x_cec.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_iwdg.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_sdio.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_wwdg.c...
+compiling delay.c...
+compiling usart.c...
+compiling main.c...
+main.c(25): warning:  #14-D: extra text after expected end of preprocessing directive
+  #include "task_manage.h".
+main.c(31): warning:  #177-D: variable "i"  was declared but never referenced
+  	u16 i=0;
+main.c: 2 warnings, 0 errors
+compiling task_manage.c...
+..\Soft\Task\task_manage.c(163): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  	len = strlen(source);
+..\Soft\Task\task_manage.c(237): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(fre_buf, "%9d", SinFre);//第一次 进入
+..\Soft\Task\task_manage.c(245): warning:  #223-D: function "atol" declared implicitly
+  		SinFre = atol(fre_buf);//字符转换数字，判断上下限
+..\Soft\Task\task_manage.c(247): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(SinFre<0) SinFre=0;
+..\Soft\Task\task_manage.c(248): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(fre_buf, "%9d", SinFre);//字符转换
+..\Soft\Task\task_manage.c(250): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%9d", SinFre);//字符转换
+..\Soft\Task\task_manage.c(271): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(fre_buf, "%5d", SquareFre);//第一次 进入
+..\Soft\Task\task_manage.c(279): warning:  #223-D: function "atol" declared implicitly
+  		SquareFre = atol(fre_buf);//字符转换数字，判断上下限
+..\Soft\Task\task_manage.c(281): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(SquareFre<0) SquareFre=0;
+..\Soft\Task\task_manage.c(282): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(fre_buf, "%9d", SquareFre);//字符转换
+..\Soft\Task\task_manage.c(284): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%9d", SquareFre);//字符转换
+..\Soft\Task\task_manage.c(304): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(fre_buf, "%5d", TriFre);//第一次 进入
+..\Soft\Task\task_manage.c(312): warning:  #223-D: function "atol" declared implicitly
+  		TriFre = atol(fre_buf);//字符转换数字，判断上下限
+..\Soft\Task\task_manage.c(314): warning:  #186-D: pointless comparison of unsigned integer with zero
+  		if(TriFre<0) TriFre=0;
+..\Soft\Task\task_manage.c(315): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(fre_buf, "%9d", TriFre);//字符转换
+..\Soft\Task\task_manage.c(317): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%9d", TriFre);//字符转换
+..\Soft\Task\task_manage.c(338): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		if(Param_Mode == 0) sprintf(fre_buf, "%9d", SweepMinFre);
+..\Soft\Task\task_manage.c(339): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		if(Param_Mode == 1) sprintf(fre_buf, "%9d", SweepMaxFre);
+..\Soft\Task\task_manage.c(340): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		if(Param_Mode == 2) sprintf(fre_buf, "%4d", SweepStepFre);
+..\Soft\Task\task_manage.c(341): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		if(Param_Mode == 3) sprintf(fre_buf, "%3d", SweepTime);
+..\Soft\Task\task_manage.c(350): warning:  #223-D: function "atol" declared implicitly
+  			SweepMinFre = atol(fre_buf);//字符转换
+..\Soft\Task\task_manage.c(352): warning:  #186-D: pointless comparison of unsigned integer with zero
+  			if(SweepMinFre<0) SweepMinFre=0;
+..\Soft\Task\task_manage.c(353): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(fre_buf, "%9d", SweepMinFre);//数据重新写入
+..\Soft\Task\task_manage.c(356): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%9d", SweepMinFre);//重新申请缓存显示
+..\Soft\Task\task_manage.c(367): warning:  #223-D: function "atol" declared implicitly
+  			SweepMaxFre = atol(fre_buf);//字符转换
+..\Soft\Task\task_manage.c(369): warning:  #186-D: pointless comparison of unsigned integer with zero
+  			if(SweepMaxFre<0) SweepMaxFre=0;
+..\Soft\Task\task_manage.c(370): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(fre_buf, "%9d", SweepMaxFre);//数据重新写入
+..\Soft\Task\task_manage.c(373): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%9d", SweepMaxFre);//重新申请缓存显示
+..\Soft\Task\task_manage.c(384): warning:  #223-D: function "atol" declared implicitly
+  			SweepStepFre = atol(fre_buf);//字符转换
+..\Soft\Task\task_manage.c(386): warning:  #186-D: pointless comparison of unsigned integer with zero
+  			if(SweepStepFre<0) SweepStepFre=0;
+..\Soft\Task\task_manage.c(387): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(fre_buf, "%5d", SweepStepFre);//数据重新写入
+..\Soft\Task\task_manage.c(390): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%5d", SweepStepFre);//重新申请缓存显示
+..\Soft\Task\task_manage.c(401): warning:  #223-D: function "atol" declared implicitly
+  			SweepTime = atol(fre_buf);//字符转换
+..\Soft\Task\task_manage.c(403): warning:  #186-D: pointless comparison of unsigned integer with zero
+  			if(SweepTime<0) SweepTime=0;
+..\Soft\Task\task_manage.c(404): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(fre_buf, "%3d", SweepTime);//数据重新写入
+..\Soft\Task\task_manage.c(407): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  		sprintf(showstr, "%3d", SweepTime);//重新申请缓存显示
+..\Soft\Task\task_manage.c(424): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  	for (i = 0 ; i < strlen(strbuf); i++)
+..\Soft\Task\task_manage.c(426): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  	for (i = 0 ; i < strlen(fre_buf); i++)
+..\Soft\Task\task_manage.c: 38 warnings, 0 errors
+compiling led.c...
+compiling lcd.c...
+compiling key.c...
+compiling sys.c...
+compiling AD9833.c...
+..\HARDWARE\AD9833\AD9833.c(142): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\AD9833\AD9833.c: 1 warning, 0 errors
+compiling Communication.c...
+compiling timer.c...
+linking...
+Program Size: Code=18266 RO-data=3266 RW-data=2468 ZI-data=2740  
+FromELF: creating hex file...
+"..\OBJ\VirtualCOMPort.axf" - 0 Error(s), 41 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\ChrisChan\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.4.1\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:10
+</pre>
+</body>
+</html>
