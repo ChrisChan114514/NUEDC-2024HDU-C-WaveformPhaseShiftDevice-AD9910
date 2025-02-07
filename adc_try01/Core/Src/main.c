@@ -50,7 +50,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define FFT_LENGTH 4096										//采样点个数
-
+#define AD9910_FREQ 100000                                      //AD9910输出频率
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -150,7 +150,6 @@ int main(void)
   MX_TIM2_Init();
   MX_FSMC_Init();
   MX_SPI1_Init();
-  MX_SPI2_Init();
   MX_DAC_Init();
   MX_I2C1_Init();
   MX_TIM4_Init();
@@ -171,7 +170,7 @@ int main(void)
 	  //DDS正弦波设置 AD9910
     AD9910_Init();                                                  // 初始化AD9910
     AD9910_Singal_Profile_Init();                                   // 单频PROFILE初始化
-    AD9910_Singal_Profile_Set(0, 1000, 0x3FFF, 0);             // 设置正弦波信息 （ 通道（0~7） ， 频率 ，幅度 ， 相位 ） 1KHZ
+    AD9910_Singal_Profile_Set(0, AD9910_FREQ, 0x3FFF, 0);             // 设置正弦波信息 （ 通道（0~7） ， 频率 ，幅度 ， 相位 ） 
 	//DDS初始化 AD9833
 	
 //	AD9833_Typedef AD9833_1;

@@ -29,13 +29,13 @@ Project File Date:  02/06/2025
 Build target 'adc_try01'
 Note: source file '..\Core\AD9833NEW\AD9833.c' - object file renamed from 'adc_try01\AD9833.o' to 'adc_try01\ad9833_1.o'.
 compiling LCD_Show.c...
-..\Core\Src\LCD_Show.c(175): warning:  #223-D: function "AD9910_Singal_Profile_Init" declared implicitly
+..\Core\Src\LCD_Show.c(170): warning:  #223-D: function "AD9910_Singal_Profile_Init" declared implicitly
   	AD9910_Singal_Profile_Init();  
-..\Core\Src\LCD_Show.c(176): warning:  #223-D: function "AD9910_Singal_Profile_Set" declared implicitly
-  	AD9910_Singal_Profile_Set(0, 1000, 0x3FFF, phase); 
+..\Core\Src\LCD_Show.c(171): warning:  #223-D: function "AD9910_Singal_Profile_Set" declared implicitly
+  	AD9910_Singal_Profile_Set(0, AD9910_FREQ, 0x3FFF, phase); 
 ..\Core\Src\LCD_Show.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=31544 RO-data=12616 RW-data=22684 ZI-data=43388  
+Program Size: Code=30812 RO-data=12616 RW-data=22680 ZI-data=26720  
 FromELF: creating hex file...
 "adc_try01\adc_try01.axf" - 0 Error(s), 2 Warning(s).
 
@@ -64,9 +64,9 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: ARM::CMSIS:DSP:Library:1.8.0
-      Library file:  CMSIS\DSP\Lib\ARM\arm_cortexM4lf_math.lib
       Include file:  CMSIS\DSP\Include\arm_math.h
-Build Time Elapsed:  00:00:03
+      Library file:  CMSIS\DSP\Lib\ARM\arm_cortexM4lf_math.lib
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

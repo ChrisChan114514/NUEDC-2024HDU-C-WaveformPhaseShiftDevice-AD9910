@@ -64,5 +64,5 @@ adc_try01\main.o: ../Core/Inc/fft_handle.h
 adc_try01\main.o: ../Core/Inc/AD9910.h
 adc_try01\main.o: ../Core/Inc/delay.h
 adc_try01\main.o: ../Drivers/DDS/AD9833.h
-adc_try01\main.o: ..\Core\AD9833NEW\AD9833_Setup.h
-adc_try01\main.o: ..\Core\AD9833NEW\AD9833.h
+adc_try01\main.o: ../Core/AD9833NEW/AD9833_Setup.h
+adc_try01\main.o: ../Core/AD9833NEW/AD9833.h

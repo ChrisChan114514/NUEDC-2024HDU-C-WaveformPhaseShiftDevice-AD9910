@@ -48,6 +48,6 @@ adc_try01\lcd_show.o: ../Core/PID/pid.h
 adc_try01\lcd_show.o: ../Core/Inc/AD9910.h
 adc_try01\lcd_show.o: ../Core/Inc/delay.h
 adc_try01\lcd_show.o: ../Drivers/DDS/AD9833.h
-adc_try01\lcd_show.o: ..\Core\AD9833NEW\AD9833_Setup.h
-adc_try01\lcd_show.o: ..\Core\AD9833NEW\AD9833.h
+adc_try01\lcd_show.o: ../Core/AD9833NEW/AD9833_Setup.h
+adc_try01\lcd_show.o: ../Core/AD9833NEW/AD9833.h
 adc_try01\lcd_show.o: D:\KeilSTM32\ARM\ARMCC\Bin\..\include\math.h

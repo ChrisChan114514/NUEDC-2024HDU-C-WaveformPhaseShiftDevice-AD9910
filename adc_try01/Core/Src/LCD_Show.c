@@ -7,7 +7,7 @@
 #include "AD9833.h"
 #include "main.h"
 #include "AD9833_Setup.h"
-
+#define AD9910_FREQ 100000 
 #define FFT_LENGTH 4096
 extern uint16_t adcBuff[FFT_LENGTH];
 extern float buff3[400];
@@ -24,12 +24,12 @@ int lenwave=1;
 #define Tnumber 10; //提取10个周期进行示波与FFT
 
 //PID变量
-float Vpp_max=0;
+
 int phase=360;
 PID phase_pid1 = { 
-    .kp = 15,  //和相位差大小相关 一定范围内
+    .kp = 7,  //和相位差大小相关 一定范围内
     .ki = 0, //可以让相位差动起来ki
-    .kd = -0.4,
+    .kd = -1,
     .error_acc = 0,
     .lastError = 0
 
@@ -120,20 +120,20 @@ void ADCvolt_ANA(void) //分析adcvolt数组
 	}
 	Vpp=Vmax-Vmin;
 	//显示基本值
-	lcd_show_string(0,0,80,16,16,"Vpp:",YELLOW);
-	sprintf(spr_str,"%.2f",Vpp);
-	lcd_show_string(0,20,80,16,16,"              ",YELLOW);
-	lcd_show_string(0,20,80,16,16,spr_str,YELLOW);
-	
-	lcd_show_string(0,40,80,16,16,"Vmin:",YELLOW);
-	sprintf(spr_str,"%.2f",Vmin);
-	lcd_show_string(0,60,80,16,16,"             ",YELLOW);
-	lcd_show_string(0,60,80,16,16,spr_str,YELLOW);
-	
-	lcd_show_string(0,80,80,16,16,"Vmax:",YELLOW);
-	sprintf(spr_str,"%.2f",Vmax);
-	lcd_show_string(0,100,80,16,16,"             ",YELLOW);
-	lcd_show_string(0,100,80,16,16,spr_str,YELLOW);
+//	lcd_show_string(0,0,80,16,16,"Vpp:",YELLOW);
+//	sprintf(spr_str,"%.2f",Vpp);
+//	lcd_show_string(0,20,80,16,16,"              ",YELLOW);
+//	lcd_show_string(0,20,80,16,16,spr_str,YELLOW);
+//	
+//	lcd_show_string(0,40,80,16,16,"Vmin:",YELLOW);
+//	sprintf(spr_str,"%.2f",Vmin);
+//	lcd_show_string(0,60,80,16,16,"             ",YELLOW);
+//	lcd_show_string(0,60,80,16,16,spr_str,YELLOW);
+//	
+//	lcd_show_string(0,80,80,16,16,"Vmax:",YELLOW);
+//	sprintf(spr_str,"%.2f",Vmax);
+//	lcd_show_string(0,100,80,16,16,"             ",YELLOW);
+//	lcd_show_string(0,100,80,16,16,spr_str,YELLOW);
 	//提取整数个周期
 //	lenwave=f_sa/fft_frequency;																//f_sa是采样频率,fft_frequency是信号的频率。两者相除得到一个周期内的采样点数
 //	lenwave=lenwave*Tnumber; 																	//Tnumber个周期采样点数
@@ -152,14 +152,9 @@ void ADCvolt_ANA(void) //分析adcvolt数组
 	//有效值判断略
 	
 	//通过Vpp锁相逻辑 2023校赛C题
-	if (Vpp>Vpp_max)
-	{
-		Vpp_max=Vpp;
-	}
-	lcd_show_string(0,140,80,16,16,"VppM:",YELLOW);
-	sprintf(spr_str,"%.2f",Vpp_max);
-	lcd_show_string(0,160,80,16,16,"             ",YELLOW);
-	lcd_show_string(0,160,80,16,16,spr_str,YELLOW);
+
+//	lcd_show_string(0,160,80,16,16,"             ",YELLOW);
+//	lcd_show_string(0,160,80,16,16,spr_str,YELLOW);
 	
 	//将Vpp作为ERR进行PID运算
 	
@@ -173,7 +168,7 @@ void ADCvolt_ANA(void) //分析adcvolt数组
 	phase += 360;
 	
 	AD9910_Singal_Profile_Init();  
-	AD9910_Singal_Profile_Set(0, 1000, 0x3FFF, phase); 
+	AD9910_Singal_Profile_Set(0, AD9910_FREQ, 0x3FFF, phase); 
 	
 //	AD9833_Typedef AD9833_1;
 //	AD9833_1.PORT = GPIOC;
@@ -182,11 +177,11 @@ void ADCvolt_ANA(void) //分析adcvolt数组
 //    AD9833_1.SS = GPIO_PIN_2;
 //	
 //	AD9833_SetWaveData(1000,phase , AD9833_1); //FRE\PHASE\Value
-	
-	lcd_show_string(100,140,80,16,16,"Phase:",YELLOW);
-	sprintf(spr_str,"%d",phase);
-	lcd_show_string(100,160,80,16,16,"             ",YELLOW);
-	lcd_show_string(100,160,80,16,16,spr_str,YELLOW);
+//	
+//	lcd_show_string(100,140,80,16,16,"Phase:",YELLOW);
+//	sprintf(spr_str,"%d",phase);
+//	lcd_show_string(100,160,80,16,16,"             ",YELLOW);
+//	lcd_show_string(100,160,80,16,16,spr_str,YELLOW);
 	
 }
 

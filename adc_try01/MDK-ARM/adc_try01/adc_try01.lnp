@@ -45,9 +45,9 @@
 "adc_try01\delay.o"
 "adc_try01\ad9910.o"
 "adc_try01\pid.o"
-"../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib"
 "adc_try01\ad9833_1.o"
 "adc_try01\ad9833_setup.o"
+"../Middlewares/ST/ARM/DSP/Lib/arm_cortexM4lf_math.lib"
 "C:\Users\ChrisChan\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\DSP\Lib\ARM\arm_cortexM4lf_math.lib"
 --library_type=microlib --strict --scatter "adc_try01\adc_try01.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
